@@ -23,16 +23,16 @@ require('http').createServer(app).listen(12345)
 
 router.get('/users', (req, res) => {
   res.json(data.map(item => {
-    const { id, name, lastname, avatar, city } = item
-    return { id, name, lastname, avatar, city }
+    const { messages, age, info, ...rest } = item
+    return rest
   }))
 })
 
 router.get('/user/:userId', (req, res) => {
   const found = data.filter(item => item.id === req.params.userId)
   if (found.length) {
-    const { id, name, lastname, avatar, city, age, info } = found[0]
-    res.json({ id, name, lastname, avatar, city, age, info })
+    const { messages, ...rest } = found[0]
+    res.json(rest)
   } else {
     res.sendStatus(404)
   }
