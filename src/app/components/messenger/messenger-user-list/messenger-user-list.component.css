@@ -1,0 +1,65 @@
+.main {
+  background:#245A7A;
+  height: 100%;
+  padding: 10px;
+}
+
+:host {
+  flex: 7;
+  transition: flex 0.3s;
+}
+
+app-messenger-extra+:host {
+  flex: 0.5;
+}
+
+app-messenger-history+:host {
+  flex: 0.001;
+  min-width: 200px;
+}
+
+app-messenger-history+:host .name {
+  display: none;
+}
+
+.initial {
+  display: none;
+}
+
+.city {
+  display: block;
+  font-size: 70%;
+  margin-top: -5px;
+  opacity: 0.5;
+}
+
+app-messenger-history+:host .initial {
+  display: inline;
+}
+app-messenger-history+:host .city {
+  display: none;
+}
+app-messenger-history+:host .avatar {
+  width: 25px;
+  height: 25px;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+ul {
+  padding-left: 0;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 10px;
+}

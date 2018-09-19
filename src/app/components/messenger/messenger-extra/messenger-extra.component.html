@@ -1,0 +1,8 @@
+<div class="main">
+  <img *ngIf="userInfo" class="avatar" [src]="'data:image/png;base64,' + userInfo.avatar" />
+  <h3>Информация о собеседнике {{userInfo?.name}} {{userInfo?.lastname}}</h3>
+  <p><span class="prop">Город:</span> {{userInfo?.city}}</p>
+  <p><span class="prop">Возраст:</span> {{userInfo?.age}}</p>
+  <p><span class="prop">О себе:</span> <br /> {{userInfo?.info}}</p>
+  <button class="btn btn-primary" (click)="goToHistory()">Отправить сообщение</button>
+</div>

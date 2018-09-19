@@ -1,0 +1,17 @@
+.main {
+  background:#03436A;
+  height: 100%;
+  padding: 10px;
+}
+
+:host {
+  flex: 1;
+}
+
+.prop {
+  opacity: 0.5;
+}
+
+.avatar {
+  float: right;
+}

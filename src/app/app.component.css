@@ -1,0 +1,15 @@
+h2 {
+  padding: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main>div:nth-child(2){
+  flex: 1;
+}
+

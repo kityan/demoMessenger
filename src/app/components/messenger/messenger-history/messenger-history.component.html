@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="messages">
+    <div *ngFor="let message of messages" [ngClass]="{'isFrom': message.isFrom}" class="message">{{message.text}}</div>
+  </div>
+  <div class="form">
+    <textarea class="form-control" #textarea (keyup)="keyup($event);"></textarea>
+    <button class="btn btn-primary" (click)="send(textarea);">Отправить</button>
+  </div>
+</div>

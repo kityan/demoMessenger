@@ -1,0 +1,11 @@
+<div class="main">
+  <ul>
+    <li *ngFor="let user of userList">
+      <img *ngIf="user" class="avatar" [src]="'data:image/png;base64,' + user.avatar" />
+      <a *ngIf="user" [routerLink]="['extra', user.id]" [ngClass]="{'active': user.id === currentUserId}">
+        <span class="lastname">{{user.lastname}} </span> <span class="name">{{user.name}}</span> <span class="initial">{{user.name.substr(0,1)}}.</span>
+      </a>
+      <div class="city">{{user.city}}</div>
+    </li>
+  </ul>
+</div>

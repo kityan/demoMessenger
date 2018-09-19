@@ -1,0 +1,46 @@
+.main {
+  background:#64A8D1;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+:host {
+  flex: 1;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.message {
+  border: 2px solid #DDD;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.message.isFrom {
+  align-self: flex-start;
+  margin-right: 100px;
+  margin-left: 0;
+}
+
+textarea {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+textarea, button {
+  width: 100%;
+}
+
